@@ -854,6 +854,47 @@
         transition: all 0.3s ease-out;
         color: #ffffff;
     }
+
+
+
+
+
+    .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+        background-color: #555;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2212";
+    }
+
+    .feature-content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+    }
 </style>
 
 <body>
@@ -1330,94 +1371,106 @@
                                         <span>eSpace3D</span>
                                     </div>
                                     <div class="inner-content content2">
-                                        <div class="timeline-icon">
+                                        <button onclick="openClosefunc()" class="collapsible">Open Collapsible</button>
+                                        <!-- <div class="timeline-icon">
                                             <i class="fa fa-users"></i>
-                                        </div>
+                                        </div> -->
                                         <!-- <h2 class="title"></h2> -->
 
-                                        <ul class="timeline-points">
-                                            <h4>Scale accurate 3D model</h4>
-                                            <li>
-                                                Shoot pictures of your space using an ordinary smartphone and upload to
-                                                eSpace3D
-                                            </li>
-                                            <li>
-                                                A scale-accurate 3D model will be reconstructed using state of the art
-                                                AI & 3D technology.
-                                            </li>
-                                            <li>
-                                                A “digital twin” of your space will be provided to enable a try-n-buy
-                                                experience in designing your space.
-                                            </li>
-                                            <li>
-                                                It could be “Living Room” or a “Dentist Office”.
-                                            </li>
-                                        </ul>
-                                        <ul class="timeline-points">
-                                            <h4>Furniture</h4>
-                                            <li>
-                                                Scale accurate 3D models of Sofas, Chairs, Tables, Lamps can be
-                                                downloaded from eStore3D.
-                                            </li>
-                                            <li>
-                                                Downloaded models can be inserted into eSpace3D. Design your space to
-                                                your liking.
-                                            </li>
-                                        </ul>
-                                        <ul class="timeline-points">
-                                            <h4>Paints, Tiles</h4>
-                                            <li>
-                                                Palettes of Paints and Tiles can be downloaded from eStore3D.
-                                            </li>
-                                            <li>
-                                                Apply to Walls, Floors etc.
-                                            </li>
-                                        </ul>
+                                        <div class="content" id="ilul">
+                                            <p>
+                                            <ul class="timeline-points">
+                                                <h4>Scale accurate 3D model</h4>
+                                                <li>
+                                                    Shoot pictures of your space using an ordinary smartphone and upload
+                                                    to
+                                                    eSpace3D
+                                                </li>
+                                                <li>
+                                                    A scale-accurate 3D model will be reconstructed using state of the
+                                                    art
+                                                    AI & 3D technology.
+                                                </li>
+                                                <li>
+                                                    A “digital twin” of your space will be provided to enable a
+                                                    try-n-buy
+                                                    experience in designing your space.
+                                                </li>
+                                                <li>
+                                                    It could be “Living Room” or a “Dentist Office”.
+                                                </li>
+                                            </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Furniture</h4>
+                                                <li>
+                                                    Scale accurate 3D models of Sofas, Chairs, Tables, Lamps can be
+                                                    downloaded from eStore3D.
+                                                </li>
+                                                <li>
+                                                    Downloaded models can be inserted into eSpace3D. Design your space
+                                                    to
+                                                    your liking.
+                                                </li>
+                                            </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Paints, Tiles</h4>
+                                                <li>
+                                                    Palettes of Paints and Tiles can be downloaded from eStore3D.
+                                                </li>
+                                                <li>
+                                                    Apply to Walls, Floors etc.
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Lighting controls</h4>
-                                            <li>
-                                                Download lamps from eStore3D and insert into eSpace3D.
-                                            </li>
-                                            <li>
-                                                Control lights via On/Off Switch & Intensity to your liking.
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Lighting controls</h4>
+                                                <li>
+                                                    Download lamps from eStore3D and insert into eSpace3D.
+                                                </li>
+                                                <li>
+                                                    Control lights via On/Off Switch & Intensity to your liking.
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Save / Open</h4>
-                                            <li>
-                                                You can save the state of eSpace3D into any file and re-open later.
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Save / Open</h4>
+                                                <li>
+                                                    You can save the state of eSpace3D into any file and re-open later.
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Transforms</h4>
-                                            <li>
-                                                Move, Rotate & Scale any object (e.g Sofa).
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Transforms</h4>
+                                                <li>
+                                                    Move, Rotate & Scale any object (e.g Sofa).
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Scene Controls</h4>
-                                            <li>
-                                                Zoom, Pan, Rotate the overall Scene.
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Scene Controls</h4>
+                                                <li>
+                                                    Zoom, Pan, Rotate the overall Scene.
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Undo / Redo</h4>
-                                            <li>
-                                                Coming soon.
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Undo / Redo</h4>
+                                                <li>
+                                                    Coming soon.
+                                                </li>
+                                            </ul>
 
-                                        <ul class="timeline-points">
-                                            <h4>Photorealistic renders</h4>
-                                            <li>
-                                                Coming soon.
-                                            </li>
-                                        </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Photorealistic renders</h4>
+                                                <li>
+                                                    Coming soon.
+                                                </li>
+                                            </ul>
+                                            </p>
+
+                                        </div>
+
+
                                     </div>
                                 </a>
                             </div>
@@ -1914,6 +1967,42 @@
             }
         };
         modelviewer.addEventListener('progress', onProgress);
+    </script>
+
+
+    <script>
+        // var coll = document.getElementsByClassName("collapsible");
+        // var i;
+        // var height = document.getElementsByClassName("content").height;
+        // for (i = 0; i < coll.length; i++) {
+        //     coll[i].addEventListener("click", function () {
+
+        //         this.classList.toggle("active");
+        //         var content = this.nextElementSibling;
+        //         if (height>1000) {
+        //             function openClosefunc()
+        //             {
+        //             document.getElementsByClassName("content").style.display = "none";
+        //             }
+        //             content.style.maxHeight = null;
+        //         } 
+        //         else {
+        //             content.style.maxHeight = content.scrollHeight + "px";
+        //         }
+        //     });
+
+        function openClosefunc() {
+            
+           var x = document.getElementById("ilul");
+           if(x.style.display === "none")
+           {
+               x.style.display = "block";
+           }
+           else{
+               x.style.display = "none";
+           }
+        }
+        
     </script>
 
 </body>
