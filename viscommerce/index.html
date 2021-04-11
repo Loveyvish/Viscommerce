@@ -666,7 +666,7 @@
     }
 
     .main-timeline .inner-content {
-        /* background-color: #fcccca; */
+        background: linear-gradient(90deg, #ffd89b, #ffc492, #ffb08e, #fd9c91, #f38a97, #e47ca0, #ce71aa, #b06ab3);
         color: #000;
         padding: 20px 10px 10px;
         margin: 0 10px;
@@ -677,7 +677,7 @@
 
     .main-timeline .content1 {
         /* background: linear-gradient(to right, #E50091, #AE0D97);  */
-        height: 700px;
+        /* height: 700px; */
     }
 
     /* .main-timeline .content2{
@@ -764,6 +764,7 @@
 
     #card2 {
         width: 700px;
+
         /* margin-left: -20rem; */
     }
 
@@ -803,6 +804,7 @@
         top: 0;
         right: 0;
         background-color: #00838d;
+        background: linear-gradient(90deg, #ffd89b, #fcb994, #ee9e96, #d5889b, #b2779e, #866b9b, #556090, #19547b);
         border-radius: 0 4px 0 32px;
     }
 
@@ -860,7 +862,8 @@
 
 
     .collapsible {
-        background-color: #777;
+        /* background-color: #777; */
+        background-color: antiquewhite;
         color: white;
         cursor: pointer;
         padding: 18px;
@@ -868,24 +871,30 @@
         border: none;
         text-align: left;
         outline: none;
-        font-size: 15px;
+        font-size: 5rem;
+        height: 7rem;
+        margin-bottom: 3%;
     }
 
     .active,
     .collapsible:hover {
-        background-color: #555;
+        background-color: antiquewhite;
     }
 
     .collapsible:after {
         content: '\002B';
-        color: white;
-        font-weight: bold;
+        /* content: "\2212"; */
+        color: #000;
+        font-weight: bolder;
         float: right;
+        margin-top: -8%;
+        font-size: 3rem;
         margin-left: 5px;
     }
 
     .active:after {
         content: "\2212";
+        /* content: '\002B'; */
     }
 
     .feature-content {
@@ -1300,66 +1309,73 @@
                             <div class="timeline" id="card1">
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-year">
-                                        <span>eStore3D</span>
+                                        <!-- <span>eStore3D</span> -->
                                     </div>
                                     <div class="inner-content content1">
-                                        <div class="timeline-icon">
-                                            <i class="fa fa-globe"></i>
+
+                                        <button id="btn1" onclick="openClosefunc1()" class="collapsible">
+                                            <h3 style="text-align: center; margin-top: 3%;">eStore3D</h3>
+                                            <a href="#!"></a>
+                                        </button>
+                                        <div class="content1" id="ilur">
+                                            <p>
+                                            <ul class="timeline-points">
+                                                <h4>3D Experience</h4>
+                                                <li>
+                                                    Experience sale-items in 3D with operations such as Zoom, Rotate.
+                                                </li>
+                                            </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Customize Appearance</h4>
+                                                <li>
+
+                                                    Customize Sofas, Chairs with different colors and textures of
+                                                    materials
+                                                    such as
+                                                    cloth,
+                                                    leather etc.
+                                                </li>
+                                            </ul>
+                                            <ul class="timeline-points">
+                                                <h4>Light controls</h4>
+                                                <li>
+                                                    Experience lamps with controls for on/off, intensity and color.
+                                                </li>
+                                            </ul>
+
+                                            <ul class="timeline-points">
+                                                <h4>Animation</h4>
+                                                <li>
+                                                    Tryout moving parts such as “cabinet doors” with 3D animation.
+                                                </li>
+                                            </ul>
+
+                                            <ul class="timeline-points">
+                                                <h4>InScene & Standalone</h4>
+                                                <li>
+                                                    Visualize sale-items individually and in context i.e InScene.
+                                                </li>
+                                            </ul>
+
+                                            <ul class="timeline-points">
+                                                <h4>Download</h4>
+                                                <li>
+                                                    Download 3D models of sale-items and insert into eSpace3D.
+                                                </li>
+
+                                                <li>
+                                                    Enables users to “design” their spaces from the comfort of their own
+                                                    home.
+                                                </li>
+
+                                                <li>
+                                                    Users experience greater satisfaction and lower cost.
+                                                </li>
+                                            </ul>
+                                            </p>
+
                                         </div>
-                                        <!-- <h2 class="title"></h2> -->
 
-                                        <ul class="timeline-points">
-                                            <h4>3D Experience</h4>
-                                            <li>
-                                                Experience sale-items in 3D with operations such as Zoom, Rotate.
-                                            </li>
-                                        </ul>
-                                        <ul class="timeline-points">
-                                            <h4>Customize Appearance</h4>
-                                            <li>
-
-                                                Customize Sofas, Chairs with different colors and textures of materials
-                                                such as
-                                                cloth,
-                                                leather etc.
-                                            </li>
-                                        </ul>
-                                        <ul class="timeline-points">
-                                            <h4>Light controls</h4>
-                                            <li>
-                                                Experience lamps with controls for on/off, intensity and color.
-                                            </li>
-                                        </ul>
-
-                                        <ul class="timeline-points">
-                                            <h4>Animation</h4>
-                                            <li>
-                                                Tryout moving parts such as “cabinet doors” with 3D animation.
-                                            </li>
-                                        </ul>
-
-                                        <ul class="timeline-points">
-                                            <h4>InScene & Standalone</h4>
-                                            <li>
-                                                Visualize sale-items individually and in context i.e InScene.
-                                            </li>
-                                        </ul>
-
-                                        <ul class="timeline-points">
-                                            <h4>Download</h4>
-                                            <li>
-                                                Download 3D models of sale-items and insert into eSpace3D.
-                                            </li>
-
-                                            <li>
-                                                Enables users to “design” their spaces from the comfort of their own
-                                                home.
-                                            </li>
-
-                                            <li>
-                                                Users experience greater satisfaction and lower cost.
-                                            </li>
-                                        </ul>
                                     </div>
                                 </a>
                             </div>
@@ -1368,10 +1384,13 @@
                             <div class="timeline blue" id="card2">
                                 <a href="#" class="timeline-content">
                                     <div class="timeline-year">
-                                        <span>eSpace3D</span>
+                                        <!-- <span>eSpace3D</span> -->
                                     </div>
                                     <div class="inner-content content2">
-                                        <button onclick="openClosefunc()" class="collapsible">Open Collapsible</button>
+                                        <button id="btn" onclick="openClosefunc()" class="collapsible">
+                                            <h3 style="text-align: center; margin-top: 3%;">eSpace3D App</h3>
+                                            <a href="#!"></a>
+                                        </button>
                                         <!-- <div class="timeline-icon">
                                             <i class="fa fa-users"></i>
                                         </div> -->
@@ -1992,17 +2011,43 @@
         //     });
 
         function openClosefunc() {
-            
-           var x = document.getElementById("ilul");
-           if(x.style.display === "none")
-           {
-               x.style.display = "block";
-           }
-           else{
-               x.style.display = "none";
-           }
+            var x = document.getElementById("ilul");
+            var y = document.getElementById("btn");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                // this.classList.toggle("active");
+                // y.style.display = "none";
+                // y.innerHTML = "close"
+
+            }
+            else {
+                x.style.display = "none";
+                this.classList.toggle("active");
+                // y.style.display = "block";
+                // y.innerHTML = "open"
+            }
+
+
+
         }
-        
+
+        function openClosefunc1() {
+            var x = document.getElementById("ilur");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+
+            }
+            else {
+                x.style.display = "none";
+                this.classList.toggle("active");
+                // y.style.display = "block";
+                // y.innerHTML = "open"
+            }
+
+
+
+        }
+
     </script>
 
 </body>
