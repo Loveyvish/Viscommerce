@@ -675,7 +675,7 @@
         position: relative;
     }
 
-    .main-timeline .content1{
+    .main-timeline .content1 {
         /* background: linear-gradient(to right, #E50091, #AE0D97);  */
         height: 700px;
     }
@@ -755,14 +755,14 @@
         }
     }
 
-    #card1{
+    #card1 {
         width: 650px;
         margin-left: -20rem;
         /* background: linear-gradient(to right, #E50091, #AE0D97); */
         height: 836px;
     }
 
-    #card2{
+    #card2 {
         width: 700px;
         /* margin-left: -20rem; */
     }
@@ -770,26 +770,89 @@
 
 
 
-    .patent-box{
+    .patent-box {
         display: flex;
         justify-content: space-around;
         background-color: beige;
     }
 
-    .patent-box .box1{
+    .patent-box .box1 {
         margin-top: 7%;
         color: #000;
         font-size: larger;
         font-size: 1.3rem;
-        
+
     }
 
-    .patent-box .box2{
+    .patent-box .box2 {
         margin-top: -6%;
     }
 
-    .box1 ul li{
+    .box1 ul li {
         list-style: disc;
+    }
+
+    .go-corner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        background-color: #00838d;
+        border-radius: 0 4px 0 32px;
+    }
+
+    .go-arrow {
+        margin-top: -4px;
+        margin-right: -4px;
+        color: white;
+        font-family: courier, sans;
+    }
+
+    .card1 {
+        display: block;
+        position: relative;
+        max-width: 262px;
+        background-color: #f2f8f9;
+        border-radius: 4px;
+        padding: 32px 24px;
+        margin: 12px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .card1:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #00838d;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 50% 50%;
+        transition: transform 0.25s ease-out;
+    }
+
+    .card1:hover:before {
+        transform: scale(21);
+    }
+
+    .card1:hover p {
+        transition: all 0.3s ease-out;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card1:hover h3 {
+        transition: all 0.3s ease-out;
+        color: #ffffff;
     }
 </style>
 
@@ -927,10 +990,11 @@
 
 
                 <section class="ModelViewrMain" id="MV">
-                    <model-viewer id="model-viewer-id" src="./assets/images/Sofa.glb" poster="./assests/images/Sofa_Poster.jpg" auto-rotate
-                        alt="Light Brown Cloth Sofa" interaction-prompt="auto" exposure="1" shadow-intensity="3"
-                        shadow-softness="0.1" camera-orbit="0 75deg 2m" max-camera-orbit="0 75deg 2.3m"
-                        interaction-prompt="none" camera-controls>
+                    <model-viewer id="model-viewer-id" src="./assets/images/Sofa.glb"
+                        poster="./assests/images/Sofa_Poster.jpg" auto-rotate alt="Light Brown Cloth Sofa"
+                        interaction-prompt="auto" exposure="1" shadow-intensity="3" shadow-softness="0.1"
+                        camera-orbit="0 75deg 2m" max-camera-orbit="0 75deg 2.3m" interaction-prompt="none"
+                        camera-controls>
 
                     </model-viewer>
 
@@ -1185,225 +1249,6 @@
         </div>
     </section>
 
-
-    <!-- <section id="features">
-        <main>
-            <h1 style="text-align: center; margin-top: 2rem;">Features</h1>
-            <h2 style="text-align: center; ">eStore3D</h2>
-            <details open>
-                <summary>3D Experience</summary>
-                <div class="faq__content">
-                    
-                    <ul class="drop-down">
-                        <li>
-                            Experience sale-items in 3D with operations such as Zoom, Rotate.
-                        </li>
-
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Customize Appearance</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Customize Sofas, Chairs with different colors and textures of materials such as cloth,
-                            leather etc.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Light controls</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Experience lamps with controls for on/off, intensity and color.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Animation</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Tryout moving parts such as “cabinet doors” with 3D animation.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>InScene & Standalone</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-
-                        <li>
-                            Visualize sale-items individually and in context i.e InScene.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Download</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Download 3D models of sale-items and insert into eSpace3D.
-                        </li>
-
-                        <li>
-                            Enables users to “design” their spaces from the comfort of their own home.
-                        </li>
-
-                        <li>
-                            Users experience greater satisfaction and lower cost.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-
-        </main>
-        <main>
-            
-            <h2 style="text-align: center; margin-top: 2rem;">eSpace3D</h2>
-            <details open>
-                <summary>Scale accurate 3D model</summary>
-                <div class="faq__content">
-                   
-                    <ul class="drop-down">
-                        <li>
-                            Shoot pictures of your space using an ordinary smartphone and upload to eSpace3D.
-                        </li>
-                        <li>
-                            A scale-accurate 3D model will be reconstructed using state of the art AI & 3D technology.
-                        </li>
-                        <li>
-                            A “digital twin” of your space will be provided to enable a try-n-buy experience in
-                            designing your space.
-                        </li>
-                        <li>
-                            t could be “Living Room” or a “Dentist Office”.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Furniture</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Scale accurate 3D models of Sofas, Chairs, Tables, Lamps can be downloaded from eStore3D.
-                        </li>
-                        <li>
-                            Downloaded models can be inserted into eSpace3D. Design your space to your liking.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Paints, Tiles</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Palettes of Paints and Tiles can be downloaded from eStore3D.
-                        </li>
-                        <li>
-                            Apply to Walls, Floors etc.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Lighting controls</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Download lamps from eStore3D and insert into eSpace3D.
-                        </li>
-                        <li>
-                            Control lights via On/Off Switch & Intensity to your liking.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Save / Open</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-
-                        <li>
-                            You can save the state of eSpace3D into any file and re-open later.
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Transforms</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Move, Rotate & Scale any object (e.g Sofa).
-                        </li>
-
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Scene Controls</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Zoom, Pan, Rotate the overall Scene.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Undo / Redo</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Coming soon.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>Photorealistic renders</summary>
-                <div class="faq__content">
-                    <ul class="drop-down">
-                        <li>
-                            Coming soon.
-                        </li>
-                    </ul>
-                </div>
-            </details>
-        </main>
-
-    </section> -->
-
     <section id="features">
         <h1 style="text-align: center; margin-top: 6%;">Features</h1>
         <div class="container-user">
@@ -1493,13 +1338,16 @@
                                         <ul class="timeline-points">
                                             <h4>Scale accurate 3D model</h4>
                                             <li>
-                                                Shoot pictures of your space using an ordinary smartphone and upload to eSpace3D
+                                                Shoot pictures of your space using an ordinary smartphone and upload to
+                                                eSpace3D
                                             </li>
                                             <li>
-                                                A scale-accurate 3D model will be reconstructed using state of the art AI & 3D technology.
+                                                A scale-accurate 3D model will be reconstructed using state of the art
+                                                AI & 3D technology.
                                             </li>
                                             <li>
-                                                A “digital twin” of your space will be provided to enable a try-n-buy experience in designing your space.
+                                                A “digital twin” of your space will be provided to enable a try-n-buy
+                                                experience in designing your space.
                                             </li>
                                             <li>
                                                 It could be “Living Room” or a “Dentist Office”.
@@ -1508,10 +1356,12 @@
                                         <ul class="timeline-points">
                                             <h4>Furniture</h4>
                                             <li>
-                                                Scale accurate 3D models of Sofas, Chairs, Tables, Lamps can be downloaded from eStore3D.
+                                                Scale accurate 3D models of Sofas, Chairs, Tables, Lamps can be
+                                                downloaded from eStore3D.
                                             </li>
                                             <li>
-                                                Downloaded models can be inserted into eSpace3D. Design your space to your liking.
+                                                Downloaded models can be inserted into eSpace3D. Design your space to
+                                                your liking.
                                             </li>
                                         </ul>
                                         <ul class="timeline-points">
@@ -1582,24 +1432,24 @@
     <section id="patent">
         <h1 style="text-align: center; margin-top: 5%;">Patent</h1>
 
-            <div class="patent-box">
-                
-                <div class="box1">
-                    
-                    <ul>
-                        <li>
-                            Filed with USPTO (United States Patent Office).
-                        </li>
-                        <li>
-                            Filed with Indian Patent Office.
-                        </li>
-                    </ul>
-                </div>
-                <div class="box2">
-                    <img src="assets/images/Simple Film Company Logo.svg" alt="">
-                </div>
+        <div class="patent-box">
+
+            <div class="box1">
+
+                <ul>
+                    <li>
+                        Filed with USPTO (United States Patent Office).
+                    </li>
+                    <li>
+                        Filed with Indian Patent Office.
+                    </li>
+                </ul>
             </div>
-        
+            <div class="box2">
+                <img src="assets/images/Simple Film Company Logo.svg" alt="">
+            </div>
+        </div>
+
     </section>
     <!--====== ABOUT PART ENDS ======-->
 
@@ -1683,10 +1533,53 @@
     </section> -->
 
     <section id="team">
+
         <h1 style="text-align: center; margin-top: 3.5rem;">Our Team</h1>
-        <div class="swiper-container">
-            <div class="swiper-wrapper" id="swiper-wrapper-b18ceflfcf58049f" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-39.7px, 0px, 0px);">
-                <div class="swiper-slide" role="group" style="transition-duration: 0ms;z-index: 0;transform: translate3d(0px,0px,-149.8px) rotateX(0deg) rotateY(59.92deg) scale(1);">
+        <div class="team-wrapper" style="display: flex; justify-content: center;">
+            <a class="card1 col-lg-3" href="#">
+                <h3>Ramakrishna J Tumuluri</h3>
+                <p class="">
+                    Founder
+                    <br>
+                    91-9885663163
+                </p>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        →
+                    </div>
+                </div>
+            </a>
+            <a class="card1" href="#" style="width: 100%">
+                <h3>Gnan Sai</h3>
+                <p class="">3D Generalist</p>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        →
+                    </div>
+                </div>
+            </a>
+            <a class="card1" href="#" style="width: 100%">
+                <h3>Jeevan</h3>
+                <p class="small">3D Content Developer</p>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        →
+                    </div>
+                </div>
+            </a>
+            <a class="card1" href="# " style="width: 100%">
+                <h3>Nitish</h3>
+                <p class="small">Student Intern</p>
+                <div class="go-corner" href="#">
+                    <div class="go-arrow">
+                        →
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="transform: scaleX(1.3) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(32deg) rotateZ(0deg) translateX(-69px) translateY(0px) translateZ(0px) ;">
                     <div class="team-card">
                         <div class="sliderText">
                             <h3 style="text-align: center;">Ramakrishna J Tumuluri </h3>
@@ -1695,14 +1588,14 @@
                             <p>
                                 <a href="https://in.linkedin.com/in/ramakrishna-tumuluri
                                 rk@viscommerce.com">Founder</a>
-                                <br>
+                                
                                 91-9885663163
                             </p>
-
+                    
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="transition-duration: 0ms;z-index: 0;transform: translate3d(0px,0px,-49.8px) rotateX(0deg) rotateY(19.92deg) scale(1);z-index: 1;">
+                <div class="swiper-slide">
                     <div class="team-card">
                         <div class="sliderText text2">
                             <h3>Gnan Sai</h3>
@@ -1713,7 +1606,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="transition-duration: 0ms;z-index: 0;transform: translate3d(0px,0px,-50.2px) rotateX(0deg) rotateY(-20.08deg) scale(1);">
+                <div class="swiper-slide" >
                     <div class="team-card">
                         <div class="sliderText text3">
                             <h3>Jeevan</h3>
@@ -1724,7 +1617,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide" style="transition-duration: 0ms;z-index: 0;transform: translate3d(0px,0px,-150.2px) rotateX(0deg) rotateY(60.08deg) scale(1); z-index: -1;">
+                <div class="swiper-slide">
                     <div class="team-card">
                         <div class="sliderText text4">
                             <h3>Nitish</h3>
@@ -1737,7 +1630,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
     </section>
 
 
@@ -1911,24 +1804,24 @@
     <script src="../package/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <!-- <script>
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 40,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-    </script> -->
+    <script>
+            // var swiper = new Swiper('.swiper-container', {
+            // effect: 'coverflow',
+            // grabCursor: true,
+            // centeredSlides: true,
+            // slidesPerView: 'auto',
+            // coverflowEffect: {
+            //     rotate: 40,
+            //     stretch: 0,
+            //     depth: 100,
+            //     modifier: 1,
+            //     slideShadows: false,
+            // },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+            // }); 
+    </script>
 
     <script>
         var slideIndex = 1;
