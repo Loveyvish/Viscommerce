@@ -21,8 +21,6 @@
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/VisCommerce.svg" type="image/png">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -457,6 +455,49 @@
 
 
 
+    /* .loader {
+  color: grey;
+  font-family: sans-serif;
+  height: 5vh;
+  left: 50%;
+  overflow-x: hidden;
+  padding-top: 7vh;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+}
+.loader:before {
+  animation: left-to-right 3s alternate infinite linear;
+  background-image: linear-gradient(to right, transparent, red, transparent);
+  content: "";
+  height: 5vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.loader:after {
+  background-image: repeating-linear-gradient(90deg, white, white 1vw, transparent 1vw, transparent 10vw);
+  content: "";
+  height: 5vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */
 
     .dot {
         cursor: pointer;
@@ -635,8 +676,8 @@
     }
 
     /* .main-timeline .content1 { */
-    /* background: linear-gradient(to right, #E50091, #AE0D97);  */
-    /* height: 700px; */
+        /* background: linear-gradient(to right, #E50091, #AE0D97);  */
+        /* height: 700px; */
     /* } */
 
     /* .main-timeline .content2{
@@ -717,7 +758,7 @@
     .main-timeline .col-md-3 {
         margin: auto;
         max-width: 46%;
-    }
+}
 
     #card1 {
         /* width: 50%; */
@@ -861,7 +902,7 @@
     }
 
     .active:after {
-        /* content: "\2212"; */
+        content: "\2212";
         /* content: '\002B'; */
     }
 
@@ -871,62 +912,6 @@
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         background-color: #f1f1f1;
-    }
-
-    body {
-        padding: 50px;
-        background: #fff;
-    }
-
-    .wrapperpatent {
-        margin: auto;
-        margin-top: 10%;
-        width: 70%;
-    }
-
-    @media(max-width:992px) {
-        .wrapperpatent {
-            margin: auto;
-            margin-top: 10%;
-            width: 100%;
-        }
-    }
-
-    .panel-heading {
-        padding: 0;
-        border: 0;
-    }
-
-    .panel-title>a,
-    .panel-title>a:active {
-        display: block;
-        padding: 15px;
-        color: #555;
-        font-size: 16px;
-        font-weight: bold;
-        /* text-transform: uppercase; */
-        letter-spacing: 1px;
-        word-spacing: 3px;
-        text-decoration: none;
-    }
-
-    .panel-heading a:before {
-
-        float: right;
-        transition: all 0.5s;
-    }
-
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
-
-    .panel-heading.active a:before {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        transform: rotate(180deg);
     }
 </style>
 
@@ -966,8 +951,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img style="background-color: white; max-width: 200% ; position: relative; left: -100%;"
-                                    src="assets/images/VisCommerce.svg" alt="Logo">
+                                <img style="background-color: white; max-width: 200% ; position: relative; left: -100%;" src="assets/images/VisCommerce.svg" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -1527,47 +1511,9 @@
 
 
     <section id="patent">
-        <div class="wrapperpatent center-block">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading active" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                <h1 style="text-align: center; margin-top: 5%;">Patent</h1>
-                            </a>
-                        </h4>
+        <h1 style="text-align: center; margin-top: 5%;">Patent</h1>
 
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="patent-box">
-
-                                <div class="box1" style="margin-left: 8%;">
-
-                                    <ul>
-                                        <li>
-                                            Filed with USPTO (United States Patent Office).
-                                        </li>
-                                        <li>
-                                            Filed with Indian Patent Office.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="box2">
-                                    <img style="max-width: 60%; margin-top: -5%; margin-left: 15%;"
-                                        src="assets/images/Simple Film Company Logo.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <h1 style="text-align: center; margin-top: 5%;">Patent</h1> -->
-
-        <!-- <div class="patent-box">
+        <div class="patent-box">
 
             <div class="box1">
 
@@ -1583,7 +1529,7 @@
             <div class="box2">
                 <img style="max-width: 60%;" src="assets/images/Simple Film Company Logo.svg" alt="">
             </div>
-        </div> -->
+        </div>
 
     </section>
     <!--====== ABOUT PART ENDS ======-->
@@ -1835,7 +1781,7 @@
                                     <li><a href="#!">Pricing</a></li>
                                 </ul>
                             </div> <!-- footer wrapper -->
-
+                            
                             <!-- <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
                                 <div class="footer-title">
                                     <h4 class="title">Resources</h4>
@@ -1856,16 +1802,13 @@
                                 <h4 class="title">Contact Us</h4>
                             </div>
                             <ul class="contact" style="margin-top: 30%;">
-                                <li>
-                                    <h4 class="title" style="color: white;">Contact</h4>
-                                </li>
+                                <li><h4 class="title" style="color: white;">Contact</h4></li>
                                 <li>+91-9885663163</li>
                                 <!-- <li>info@gmail.com</li>
                                 <li>www.yourweb.com</li>
                                 <li>123 Stree New York City , United <br> States Of America 750.</li> -->
                             </ul>
-                        </div>
-                        <!--footer contact-->
+                        </div> <!--footer contact-->
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer widget -->
