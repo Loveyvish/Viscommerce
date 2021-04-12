@@ -150,11 +150,20 @@
 
 
     .yt-video {
+        /* display: table;
+        margin: auto;
+        border: 10px solid #FE5143;
+        border-radius: 10px;
+        margin-top: 2.5rem; */
         display: table;
         margin: auto;
         border: 10px solid #FE5143;
         border-radius: 10px;
         margin-top: 2.5rem;
+        position: relative;
+        width: 60%;
+        overflow: hidden;
+        padding-top: 31.25%;
     }
 
     .video-container2 {
@@ -163,20 +172,35 @@
         border: 10px solid #FE5143;
         border-radius: 10px;
         margin-top: 2.5rem;
+        position: relative;
+        width: 60%;
+        overflow: hidden;
+        padding-top: 31.25%;
     }
 
     #yt-video {
         width: 47rem;
         height: 25rem;
-
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
 
     }
 
     #yt-video2 {
-        width: 47rem;
-        height: 25rem;
-
-
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 
     .about li {
@@ -873,7 +897,7 @@
         background-color: #f1f1f1;
     }
 
-    
+
 
     .wrapperpatent {
         margin: auto;
@@ -924,6 +948,18 @@
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
         transform: rotate(180deg);
+    }
+
+    #ilul {
+        display: none;
+    }
+
+    #ilur {
+        display: none;
+    }
+
+    #team-colour {
+        background-color: #cbe3e7;
     }
 </style>
 
@@ -1055,11 +1091,10 @@
 
 
                 <section class="ModelViewrMain" id="MV">
-                    <model-viewer id="model-viewer-id" src="../../Sofa/models/Sofa.glb"
-                        poster="../../Sofa/images/Sofa_Poster.jpg" auto-rotate alt="Light Brown Cloth Sofa"
-                        interaction-prompt="auto" exposure="1" shadow-intensity="3" shadow-softness="0.1"
-                        camera-orbit="0 75deg 2m" max-camera-orbit="0 75deg 2.3m" interaction-prompt="none"
-                        camera-controls>
+                    <model-viewer id="model-viewer-id" src="Sofa/models/Sofa.glb" poster="Sofa/images/Sofa_Poster.jpg"
+                        auto-rotate alt="Light Brown Cloth Sofa" interaction-prompt="auto" exposure="1"
+                        shadow-intensity="3" shadow-softness="0.1" camera-orbit="0 75deg 2m"
+                        max-camera-orbit="0 75deg 2.3m" interaction-prompt="none" camera-controls>
 
                     </model-viewer>
 
@@ -1329,8 +1364,10 @@
                                     <div class="inner-content content1">
 
                                         <button id="btn1" onclick="openClosefunc1()" class="collapsible">
-                                            <h3 style="text-align: center; margin-top: 3%;">eStore3D</h3>
-                                            <a href="#!"></a>
+                                            <h3 style="text-align: center; margin-top: 3%;"><a href="#!"
+                                                    style="text-decoration: none; font-size: 2rem; color: #000;">eStore3D</a>
+                                            </h3>
+
                                         </button>
                                         <div class="content1" id="ilur">
                                             <p>
@@ -1403,8 +1440,10 @@
                                     </div>
                                     <div class="inner-content content2">
                                         <button id="btn" onclick="openClosefunc()" class="collapsible">
-                                            <h3 style="text-align: center; margin-top: 3%;">eSpace3D App</h3>
-                                            <a href="#!"></a>
+                                            <h3 style="text-align: center; margin-top: 3%;"><a href="#!"
+                                                    style="text-decoration: none; font-size: 2rem; color: #000;">eSpace3D
+                                                    App</a> </h3>
+
                                         </button>
                                         <!-- <div class="timeline-icon">
                                             <i class="fa fa-users"></i>
@@ -1555,7 +1594,7 @@
                 </div>
             </div>
         </div>
-        
+
 
     </section>
     <!--====== ABOUT PART ENDS ======-->
@@ -1566,7 +1605,7 @@
     <!--====== VIDEO COUNTER PART START ======-->
 
     <section id="facts" class="video-counter pt-70">
-      
+
 
         <h2 style="text-align: center; margin-top: 2.5rem;" id="demo">VisCommerce Demo</h2>
         <div class="video-container2">
@@ -1579,12 +1618,79 @@
 
     </section>
 
-    
+
 
     <section id="team">
 
-        <h1 style="text-align: center; margin-top: 3.5rem;">Our Team</h1>
-        <div class="team-wrapper" style="display: flex; justify-content: center;">
+        <div class="wrapperpatent center-block">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading active" id="team-colour" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <h1 style="text-align: center; margin-top: 2.5%;">Our Team</h1>
+                            </a>
+                        </h4>
+
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="team-box">
+
+                                <div class="team-wrapper" style="display: flex; justify-content: center;">
+                                    <a class="card1 col-lg-3" href="#">
+                                        <h3>Ramakrishna J Tumuluri</h3>
+                                        <p class="">
+                                            Founder
+                                            <br>
+                                            91-9885663163
+                                        </p>
+                                        <div class="go-corner" href="#">
+                                            <div class="go-arrow">
+                                                →
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card1" href="#" style="width: 100%">
+                                        <h3>Gnan Sai</h3>
+                                        <p class="" style="font-size: 20px;">3D Generalist</p>
+                                        <div class="go-corner" href="#">
+                                            <div class="go-arrow">
+                                                →
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card1" href="#" style="width: 100%">
+                                        <h3>Jeevan</h3>
+                                        <p class="" style="font-size: 20px;">3D Content Developer</p>
+                                        <div class="go-corner" href="#">
+                                            <div class="go-arrow">
+                                                →
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="card1" href="# " style="width: 100%">
+                                        <h3>Nitish</h3>
+                                        <p class="" style="font-size: 20px;">Student Intern</p>
+                                        <div class="go-corner" href="#">
+                                            <div class="go-arrow">
+                                                →
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="team-wrapper" style="display: flex; justify-content: center;">
             <a class="card1 col-lg-3" href="#">
                 <h3>Ramakrishna J Tumuluri</h3>
                 <p class="">
@@ -1625,8 +1731,8 @@
                     </div>
                 </div>
             </a>
-        </div>
-        
+        </div> -->
+
     </section>
 
 
@@ -1648,7 +1754,7 @@
 
     <footer id="footer" class="footer-area pt-120">
         <div class="container">
-            
+
             <div class="footer-widget pb-100">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-8">
@@ -1928,16 +2034,12 @@
             var y = document.getElementById("btn");
             if (x.style.display === "none") {
                 x.style.display = "block";
-                // this.classList.toggle("active");
-                // y.style.display = "none";
-                // y.innerHTML = "close"
 
             }
             else {
                 x.style.display = "none";
-                this.classList.toggle("active");
-                // y.style.display = "block";
-                // y.innerHTML = "open"
+                // this.classList.toggle("active");
+
             }
 
 
