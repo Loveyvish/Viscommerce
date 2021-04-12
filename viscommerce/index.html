@@ -609,8 +609,8 @@
 
     .main-timeline {
         font-family: 'PT Sans', sans-serif;
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
     }
 
     .main-timeline:after {
@@ -755,16 +755,22 @@
         }
     }
 
+    .main-timeline .col-md-3 {
+        margin: auto;
+        max-width: 46%;
+}
+
     #card1 {
-        width: 650px;
+        /* width: 50%; */
         margin-left: -20rem;
         /* background: linear-gradient(to right, #E50091, #AE0D97); */
-        height: 836px;
+        /* height: 836px; */
+        margin: auto;
     }
 
     #card2 {
-        width: 700px;
-
+        /* width: 700px; */
+        margin-top: 4%;
         /* margin-left: -20rem; */
     }
 
@@ -775,10 +781,12 @@
         display: flex;
         justify-content: space-around;
         background-color: beige;
+        height: 250px;
     }
 
+
     .patent-box .box1 {
-        margin-top: 7%;
+        margin-top: 5%;
         color: #000;
         font-size: larger;
         font-size: 1.3rem;
@@ -786,7 +794,8 @@
     }
 
     .patent-box .box2 {
-        margin-top: -6%;
+        margin-top: -2%;
+        margin-left: -1%;
     }
 
     .box1 ul li {
@@ -1518,7 +1527,7 @@
                 </ul>
             </div>
             <div class="box2">
-                <img src="assets/images/Simple Film Company Logo.svg" alt="">
+                <img style="max-width: 60%;" src="assets/images/Simple Film Company Logo.svg" alt="">
             </div>
         </div>
 
