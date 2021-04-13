@@ -211,13 +211,13 @@
         color: black;
     }
 
-    .logotop{
-        background-color: white; 
-        max-width: 200% ; 
-        position: relative; 
+    .logotop {
+        background-color: white;
+        max-width: 200%;
+        position: relative;
         left: -100%;
     }
-    
+
 
     .container2 {
         display: flex;
@@ -299,7 +299,7 @@
         .slideshow-container {
             margin: auto;
             margin-top: 14%;
-            
+
         }
     }
 
@@ -307,7 +307,7 @@
         .slideshow-container {
             margin: auto;
             margin-top: 18%;
-            
+
         }
     }
 
@@ -746,8 +746,8 @@
             margin: 0 0 15px;
         }
     }
-    @media screen and (min-width:575px)
-    {
+
+    @media screen and (min-width:575px) {
         .main-timeline .col-md-3 {
             margin: auto;
             max-width: 46%;
@@ -829,6 +829,7 @@
         text-decoration: none;
         z-index: 0;
         overflow: hidden;
+        margin: 7% auto;
     }
 
     .card1:before {
@@ -888,17 +889,16 @@
         content: '\002B';
         /* content: "\2212"; */
         color: #000;
-        font-weight: bolder;
+        /* font-weight: bolder; */
         float: right;
-        margin-top: -8%;
+        margin-top: -9%;
         font-size: 3rem;
         margin-left: 5px;
     }
 
-    .active:after {
+    /* .active:after {
         content: "\2212";
-        /* content: '\002B'; */
-    }
+    } */
 
     .feature-content {
         padding: 0 18px;
@@ -943,7 +943,13 @@
     }
 
     .panel-heading a:before {
-
+        content: '\002B';
+        color: #000;
+        font-weight: 500;
+        float: right;
+        margin-top: 0.5%;
+        font-size: 3rem;
+        margin-left: 5px;
         float: right;
         transition: all 0.5s;
     }
@@ -959,7 +965,10 @@
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
         transform: rotate(180deg);
+
     }
+
+    
 
     #ilul {
         display: none;
@@ -972,29 +981,51 @@
     #team-colour {
         background-color: #cbe3e7;
     }
+
+    .team-wrapper {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-top: 6%;
+        margin: auto;
+        justify-content: center;
+    }
+
     @media only screen and (max-width: 1000px) {
-        .logotop{
+        .logotop {
             position: relative;
             left: 0%;
+        }
+
+    }
+
+    @media only screen and (max-width: 991px) {
+        .about-container {
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 
     @media only screen and (max-width: 750px) {
-        .yt-video{
+        .yt-video {
             width: 80%;
         }
 
-        .video-container2{
+        .video-container2 {
             width: 80%;
         }
-        .slideshow-container{
+
+        .slideshow-container {
             max-width: 80%;
         }
+
     }
-    @media only screen and (max-width: 575px){
-        .footerlogo{
+
+    @media only screen and (max-width: 575px) {
+        .footerlogo {
             display: none;
         }
+
     }
 </style>
 
@@ -1034,8 +1065,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img class="logotop"
-                                    src="assets/images/VisCommerce.svg" alt="Logo">
+                                <img class="logotop" src="assets/images/VisCommerce.svg" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -1069,16 +1099,17 @@
                                         <a href="#contact">Contact</a>
                                     </li>
                                 </ul>
+                                <div style="margin: 0.5rem;" class="navbar-btn d-none d-sm-inline-block">
+                                    <a class="main-btn" data-scroll-nav="0" href=" http://viscommerce.com/eSpace3D.html"
+                                        rel="nofollow">eSpace3D App</a>
+                                </div>
+                                <div style="margin: 0.5rem;" class="navbar-btn d-none d-sm-inline-block">
+                                    <a class="main-btn" data-scroll-nav="0" href="viscommerce.com/estore3d"
+                                        rel="nofollow">eStore3D</a>
+                                </div>
                             </div> <!-- navbar collapse -->
 
-                            <div style="margin: 0.5rem;" class="navbar-btn d-none d-sm-inline-block">
-                                <a class="main-btn" data-scroll-nav="0" href=" http://viscommerce.com/eSpace3D.html"
-                                    rel="nofollow">eSpace3D</a>
-                            </div>
-                            <div style="margin: 0.5rem;" class="navbar-btn d-none d-sm-inline-block">
-                                <a class="main-btn" data-scroll-nav="0" href="viscommerce.com/estore3d"
-                                    rel="nofollow">eStore3D</a>
-                            </div>
+
                         </nav> <!-- navbar -->
                     </div>
                 </div> <!-- row -->
@@ -1249,7 +1280,7 @@
 
     <section id="about" class="about-area pt-70">
         <div class="container">
-            <div class="row">
+            <div class="row about-container">
                 <div class="col-lg-6" id="bg-gradient" aos-init aos-animate" data-aos="fade-up" data-aos-offset="200">
                     <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -1299,7 +1330,7 @@
             <!-- <img src="assets/images/about-shape-2.svg" alt="shape"> -->
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row about-container">
                 <div class="col-lg-6 order-lg-last" id="bg-gradient2">
                     <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -1345,7 +1376,7 @@
 
     <section class="about-area pt-70">
         <div class="container">
-            <div class="row">
+            <div class="row about-container">
                 <div class="col-lg-6 " id="bg-gradient3">
                     <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -1590,6 +1621,13 @@
     </section>
 
 
+
+
+    
+
+
+
+
     <section id="patent">
         <div class="wrapperpatent center-block">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -1598,7 +1636,7 @@
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                <h1 style="text-align: center; margin-top: 2.5%;">Patent</h1>
+                                <h1 style="text-align: center; margin-top: 0.5%;">Patent</h1>
                             </a>
                         </h4>
 
@@ -1664,7 +1702,7 @@
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                <h1 style="text-align: center; margin-top: 2.5%;">Our Team</h1>
+                                <h1 style="text-align: center; margin-top: 0.5%;">Our Team</h1>
                             </a>
                         </h4>
 
@@ -1674,7 +1712,7 @@
                         <div class="panel-body">
                             <div class="team-box">
 
-                                <div class="team-wrapper" style="display: flex; justify-content: center;">
+                                <div class="team-wrapper">
                                     <a class="card1 col-lg-3" href="#">
                                         <h3>Ramakrishna J Tumuluri</h3>
                                         <p class="">
@@ -1688,7 +1726,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="card1" href="#" style="width: 100%">
+                                    <a class="card1" href="#" style="width: 100%; height: 181px;">
                                         <h3>Gnan Sai</h3>
                                         <p class="" style="font-size: 20px;">3D Generalist</p>
                                         <div class="go-corner" href="#">
@@ -1697,7 +1735,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="card1" href="#" style="width: 100%">
+                                    <a class="card1" href="#" style="width: 100%; height: 181px;">
                                         <h3>Jeevan</h3>
                                         <p class="" style="font-size: 20px;">3D Content Developer</p>
                                         <div class="go-corner" href="#">
@@ -1706,7 +1744,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="card1" href="# " style="width: 100%">
+                                    <a class="card1" href="# " style="width: 100%; height: 181px;">
                                         <h3>Nitish</h3>
                                         <p class="" style="font-size: 20px;">Student Intern</p>
                                         <div class="go-corner" href="#">
@@ -1795,7 +1833,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <a class="logo" href="#">
-                                <img class="footerlogo" src="assets/images/VisCommerce.svg" alt="logo" style="background: white;">
+                                <img class="footerlogo" src="assets/images/VisCommerce.svg" alt="logo"
+                                    style="background: white;">
                             </a>
                             <!-- <p class="text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy
                                 eirmod tempor invidunt ut labore et dolore magna aliquyam.</p> -->
