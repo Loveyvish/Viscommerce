@@ -646,7 +646,6 @@
         display: flex;
         justify-content: space-around;
         background-color: beige;
-        height: 250px;
     }
 
 
@@ -762,7 +761,7 @@
         color: #000;
         font-weight: bolder;
         float: right;
-        margin-top: -8%;
+        margin-top: -9%;
         font-size: 3rem;
         margin-left: 5px;
     }
@@ -786,6 +785,7 @@
         margin: auto;
         margin-top: 10%;
         width: 70%;
+        
     }
 
     @media(max-width:992px) {
@@ -805,7 +805,7 @@
         border: 0;
     }
 
-    .panel-heading:after {
+    /* .panel-heading:after {
         content: '\002B';
         color: #000;
         font-weight: bolder;
@@ -813,7 +813,7 @@
         margin-top: -8%;
         font-size: 3rem;
         margin-left: 5px;
-    }
+    } */
 
     .panel-title>a,
     .panel-title>a:active {
@@ -832,14 +832,16 @@
 
         float: right;
         transition: all 0.5s;
+        content: '\002B';
+        color: #000;
+        font-weight: bolder;
+        float: right;
+        /* margin-top: -8%; */
+        font-size: 3rem;
+        margin-left: 5px;
     }
 
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
+    
 
     .panel-heading.active a:before {
         -webkit-transform: rotate(180deg);
@@ -941,7 +943,7 @@
         
     }
 
-    .drop1:after {
+    /* .drop1:after {
         content: '\002B';
         color: #000;
         font-weight: bolder;
@@ -969,7 +971,7 @@
         margin-top: -7%;
         font-size: 3rem;
         margin-right: 3%;
-    }
+    } */
     #bg-gradient {
         background: linear-gradient(90deg, #ffddc5, #ffdcbd, #ffdcb5, #ffdcad, #ffdca5, #ffdc9d, #ffdd95, #ffde8d);
         background: linear-gradient(90deg, #f87d05, #f9861c, #fa8e2c, #fb9639, #fc9e46, #fda652, #feae5f, #ffb56b);
@@ -988,4 +990,15 @@
 
     .drop3-box{
         background-color: white ;
+    }
+
+    @media only screen and (min-width: 765px) {
+        #c4 {
+            grid-column-start: 2;
+        }
+    }
+
+    #patent {
+        width: 80%;
+        margin: auto;
     }
