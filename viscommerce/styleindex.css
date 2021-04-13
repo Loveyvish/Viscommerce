@@ -938,6 +938,37 @@
         }
     }
 
+    .timeline-a a{
+        color: #000;
+    }
+
+    @media only screen and (max-width: 970px){
+        .collapsible:after {
+            content: '\002B';
+            /* content: "\2212"; */
+            color: #000;
+            font-weight: bolder;
+            float: right;
+            margin-top: -3.4rem;
+            font-size: 2.5rem;
+            margin-left: 5px;
+        }
+        .timeline-a a{
+            
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: #000;
+                margin-left: -23%;
+            
+        }
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            font-size: 34px;
+        }
+    }
+
     .userInput{
         outline: none;
         
@@ -1001,4 +1032,8 @@
     #patent {
         width: 80%;
         margin: auto;
+    }
+
+    div a.main-btn{
+        margin: 0.5rem;
     }
